@@ -1,0 +1,54 @@
+.data-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  /* height: 200px; Set a fixed height */
+  overflow-y: scroll; /* Add a vertical scrollbar */
+  flex-grow: 1;
+  flex-shrink: 1; /* Allow it to shrink if needed */
+  max-height: 50vh;
+}
+
+.data-row {
+  display: flex;
+  border-top: 1px solid #2f3130;
+  background-color: #111312;
+  /* margin-bottom: 1rem; */
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.data-cell {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+  border-left: 1px solid #2f3130;
+}
+
+.data-cell:first-child {
+  border-left: none;
+}
+
+.header {
+  font-weight: bold;
+  background-color: #2f3130;
+  color: #fff;
+  cursor: initial;
+}
+
+.CaseSearch {
+  margin-left: 3rem;
+  /* display: inline-block; */
+  /* margin: 1.2rem 1.6rem; */
+  margin-bottom: 2rem;
+}
+
+.cases {
+  height: 100%;
+}
+
+.data-row:hover {
+  background-color: #2F3130; /* Change to your desired hover color */
+}

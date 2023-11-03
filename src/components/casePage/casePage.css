@@ -1,0 +1,137 @@
+.casePage{
+  width: 100%;
+  
+}
+.button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-style: 'Open Sans';
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ font-weight: 600;
+ border-radius: 10px;
+}
+.modal {
+    font-size: 12px;
+    height: 60vh;
+  }
+    .header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 5px;
+  }
+   .content {
+    width: 100%;
+    padding: 10px 5px;
+  }
+    .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+  }
+    .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  }
+
+  .popup-group{
+    display: flex;
+    gap: 3rem;
+   
+    /* justify-content: space-around; */
+    width: fit-content;
+    /* margin: 3rem auto; */
+  }
+
+  .case-top{
+    display: flex;
+    color: #cfcece;
+    align-items: center;
+   margin: 2rem 3rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .case-head{
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+  .case-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 75%;
+    gap: 1.5rem;
+    margin: 0 2rem;
+    
+  }
+  .case-grid-items{
+    background-color: #1E1E1E;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .casepage-mainsection{
+    height: 100%;
+  }
+
+  .case-button{
+    padding: 1rem 1.4rem;
+    border: 1px solid #FFD58A;
+    border-radius: 44px;
+    color:#FFD58A ;
+    background-color: rgba(217, 217, 217, 0.00);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .case-button:hover{
+    background-color: #FFD58A;
+    color: black;
+  }
+
+  .case-tag{
+    display: flex;
+    gap: 3rem;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  .tag{
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    background: #FFD58A;
+    padding: 0.2rem 0.4rem;
+    font-weight: 700;
+  }
+
+  .g{
+      background-color: #008A70;
+      color: #ffffff;
+  }
+
+  .r{
+    background-color: #FF4A48;
+    color: #ffffff;
+  }

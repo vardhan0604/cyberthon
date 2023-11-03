@@ -1,0 +1,283 @@
+.casePage {
+  width: 100%;
+}
+.button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-style: "Open Sans";
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.modal {
+  font-size: 12px;
+  height: 60vh;
+}
+.header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 5px;
+}
+.content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.popup-group {
+  display: flex;
+  gap: 3rem;
+
+  width: fit-content;
+}
+
+.case-top {
+  display: flex;
+  color: #cfcece;
+  align-items: center;
+  margin: 2rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case-head {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.case-gridq {
+  height: 75%;
+  /* display: flex; */
+  /* width: 100%; */
+  margin: 0 2rem;
+}
+.case-grid-items {
+  background-color: #1e1e1e;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.casepage-mainsection {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  gap: 2.6rem;
+}
+.casepage-mainsection-left {
+  width: 70%;
+}
+.case-button {
+  padding: 1rem 1.4rem;
+  border: 1px solid #ffd58a;
+  border-radius: 44px;
+  color: #ffd58a;
+  background-color: rgba(217, 217, 217, 0);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+.case-button:hover {
+  background-color: #ffd58a;
+  color: black;
+}
+
+.case-tag {
+  display: flex;
+  gap: 3rem;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.tag {
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  background: #ffd58a;
+  padding: 0.2rem 0.4rem;
+  font-weight: 700;
+}
+
+.g {
+  background-color: #008a70;
+  color: #ffffff;
+}
+
+.r {
+  background-color: #ff4a48;
+  color: #ffffff;
+}
+
+.flex-1 {
+  display: flex;
+
+  height: 40%;
+  width: 100%;
+  gap: 1.6rem;
+  margin-bottom: 2.6rem;
+}
+
+.flex-1-items{
+  height: 100%;
+  width: 100%;
+  border: 2px solid #FFD58A;
+  padding: 0.58rem 0.6rem
+}
+.flex-1-items div{
+  height: 80%;
+color: #fff;  /* width: 100%; */
+  overflow: hidden;
+}
+.flex-2 {
+  display: flex;
+  margin-bottom: 2.2rem;
+  height: 30%;
+  width: 100%;
+  gap: 1.6rem;
+}
+
+.flex-2-items{
+  height: 100%;
+  width: 100%;
+  border: 2px solid #FFD58A;
+  padding: 0.58rem 0.6rem;
+  color: #fff;
+}
+.flex-2-items div{
+  height: 80%;
+  
+  width: 100%;
+  padding: 1rem 1.4rem;
+}
+.flex-3 {
+  display: flex;
+  height: 20%;
+  width: 50%;
+  gap: 1.6rem;
+}
+
+.flex-3 div {
+  height: 80%;
+  background-color: #fff;
+  width: 100%;
+}
+.casepage-mainsection-right {
+  width: 25%;
+  margin-left: 2rem;
+}
+
+.casepage-mainsection-right-top {
+  margin-top: 3rem;
+}
+.casepage-mainsection-right-top-tags {
+  display: flex;
+  gap: 1.4rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  align-items: center;
+  cursor: pointer;
+}
+.caseflow {
+  background-color: #fff;
+  width: 90%;
+  height: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.officer-assigned {
+  width: 90%;
+}
+
+.officer-assigned-head {
+  color: #ffd58a;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.officer-assigned-info{
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 4px;
+background-color: #7DD0E3;
+padding: 1rem 1.6rem;
+}
+.officer-assigned-info-details{
+  color: #000;
+  font-size: 1.2rem;
+
+  font-weight: 600;
+}
+.officer-assigned-info-img{
+  background-color: #fff;
+  padding: 1.4rem;
+  border-radius: 50%;
+}
+
+.flex-head{
+  margin: 0;
+  color: #FFD58A;
+  height: 20%;
+}
+ 
+.fir-container {
+  position: relative;
+ width: 100%; 
+  margin: 0 ;
+  height: 40%;
+}
+.fir-container button{
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.fixed-size-fir {
+  width: 100%;
+  /* height: auto; */
+} 
+
+.bold {
+  font-weight: bold;
+}
+
+.d {
+  font-size: 18px; 
+  display: block;
+  
+}
+.caseflow-img{
+  height: 100%;
+}
