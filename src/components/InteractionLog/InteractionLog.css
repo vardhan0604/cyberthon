@@ -10,13 +10,7 @@
     width: 100%;
     padding: 0 3rem;
 }
-/* InteractionLog.css */
 
-
-/* InteractionLog.css */
-
-
-  /* InteractionLog.css */
 
 .InteractionLog {
 
@@ -71,13 +65,13 @@
   background-color: #555;
 }
 
-form {
+.interactionlog-form {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-input {
+.interactionlog-input {
   width: calc(50% - 5px);
   padding: 10px;
   font-size: 14px;
@@ -88,7 +82,7 @@ input {
   box-sizing: border-box;
 }
 
-button {
+.interactionlog-button {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -99,6 +93,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.interactionlog-button:hover {
   background-color: #0056b3;
 }

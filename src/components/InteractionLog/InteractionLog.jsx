@@ -55,6 +55,7 @@ const InteractionLogEntry = ({ dateTime, location, officer, summary }) => {
   );
 };
 
+
 const InteractionLog = () => {
   const [formData, setFormData] = useState({
     dateTime: '',
@@ -98,12 +99,13 @@ const InteractionLog = () => {
       <div className="interactionlog-container">
         <h2 className="interactionlog-container-head">Interaction Log</h2>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='interactionlog-form'>
           <input
             type="text"
             name="dateTime"
             value={formData.dateTime}
             onChange={handleChange}
+            className='interactionlog-input'
             placeholder="Date and Time"
           />
           <input
@@ -111,6 +113,7 @@ const InteractionLog = () => {
             name="location"
             value={formData.location}
             onChange={handleChange}
+            className='interactionlog-input'
             placeholder="Location"
           />
           <input
@@ -118,16 +121,18 @@ const InteractionLog = () => {
             name="officer"
             value={formData.officer}
             onChange={handleChange}
+            className='interactionlog-input'
             placeholder="Officer Name"
           />
           <input
             type="text"
             name="summary"
+            className='interactionlog-input'
             value={formData.summary}
             onChange={handleChange}
             placeholder="Summary"
           />
-          <button type="submit">Add Interaction</button>
+          <button type="submit" className='interactionlog-button'>Add Interaction</button>
         </form>
 
         {logEntries.map((entry, index) => (

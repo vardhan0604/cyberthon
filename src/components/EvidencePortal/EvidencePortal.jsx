@@ -4,66 +4,108 @@ import React, { useState } from 'react';
 import Navtop from '../Navbar/Navtop';
 import './EvidencePortal.css';
 
-const CaseFolder = ({ caseId, caseName, evidenceUsed, evidenceList }) => {
+const CaseFile = ({ fileId, fileName, fileType, fileSize }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleFolder = () => {
+  const toggleFile = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className="case-folder">
-      <div className="folder-header" onClick={toggleFolder}>
-        <span>{caseName}</span>
-        <span>Case ID: {caseId}</span>
-        <span>Evidence Used for: {evidenceUsed}</span>
+    <div className="EvidencePortal-case-file">
+      <div className="EvidencePortal-file-header" onClick={toggleFile}>
+        <span>{fileName}</span>
+        <span>ID: {fileId}</span>
+        <span>Type: {fileType}</span>
+        <span>Size: {fileSize}</span>
       </div>
       {isOpen && (
-        <ul className="evidence-list">
-          {evidenceList.map((evidence, index) => (
-            <li key={index}>
-              <a href="#">{evidence}</a>
-            </li>
-          ))}
-        </ul>
+        <div className="EvidencePortal-file-details">
+          Details go here...
+        </div>
       )}
     </div>
   );
 };
 
 const EvidencePortal = () => {
-  const caseFolders = [
+  const caseFiles = [
     {
-      caseId: '12345',
-      caseName: 'Case 1',
-      evidenceUsed: 'Investigation',
-      evidenceList: ['Evidence 1', 'Evidence 2']
+      fileId: '1',
+      fileName: 'File 1',
+      fileType: 'txt',
+      fileSize: '10 KB'
     },
     {
-      caseId: '67890',
-      caseName: 'Case 2',
-      evidenceUsed: 'Trial',
-      evidenceList: ['Evidence 3', 'Evidence 4']
+      fileId: '2',
+      fileName: 'File 2',
+      fileType: 'pdf',
+      fileSize: '500 KB'
     },
-    // Add more case folders as needed
+    // Add more case files as needed
   ];
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [password, setPassword] = useState('');
+  const [showContent, setShowContent] = useState(false);
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault();
+    if (password === '6543') {
+      setShowContent(true);
+    } else {
+      alert('Incorrect password. Please try again.');
+    }
+  };
 
   return (
     <div className="EvidencePortal">
       <Navtop />
       <div className="EvidencePortal-container">
         <h2 className="EvidencePortal-container-head">Evidence Portal</h2>
-        <div className="case-folders">
-          {caseFolders.map((caseFolder) => (
-            <CaseFolder
-              key={caseFolder.caseId}
-              caseId={caseFolder.caseId}
-              caseName={caseFolder.caseName}
-              evidenceUsed={caseFolder.evidenceUsed}
-              evidenceList={caseFolder.evidenceList}
+
+        {!showContent ? (
+          <form onSubmit={handlePasswordSubmit} className="password-form">
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter Password"
+              className="password-input"
             />
-          ))}
-        </div>
+            <button type="submit" className="password-button">Submit</button>
+          </form>
+        ) : (
+          <>
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={handleSearch}
+              placeholder="Search files..."
+              className="EvidencePortal-search"
+            />
+
+            <div className="EvidencePortal-case-files">
+              {caseFiles
+                .filter((file) =>
+                  Object.values(file).join(' ').toLowerCase().includes(searchTerm.toLowerCase())
+                )
+                .map((caseFile) => (
+                  <CaseFile
+                    key={caseFile.fileId}
+                    fileId={caseFile.fileId}
+                    fileName={caseFile.fileName}
+                    fileType={caseFile.fileType}
+                    fileSize={caseFile.fileSize}
+                  />
+                ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
