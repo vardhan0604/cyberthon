@@ -18,6 +18,7 @@ import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
 
 import InteractionLog from "./components/InteractionLog/InteractionLog";
 import CasePagee from "./components/CasePaage/CasePagee";
+import EvidencePortal from "./components/EvidencePortal/EvidencePortal";
 function App() {
   const firebaseConfig = {
     apiKey: "AIzaSyDjsec2TjbFSkTom1C4Xx-fXSagCTPrTJo",
@@ -49,7 +50,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/case" element={<CasePage />} />
           <Route path="/caase" element={<CasePagee />} />
-          <Route path="/Evidence" element={<Home />} />
+          <Route path="/EvidencePortal" element={<EvidencePortal />} />
           <Route path="/InteractionLog" element={<InteractionLog />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/officers" element={<Officers />} />

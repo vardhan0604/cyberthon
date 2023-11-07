@@ -1,3 +1,104 @@
 .InteractionLog{
     width: 100%;
 }
+.interactionlog-container-head{
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #fff;
+}
+.interactionlog-container{
+    width: 100%;
+    padding: 0 3rem;
+}
+/* InteractionLog.css */
+
+
+/* InteractionLog.css */
+
+
+  /* InteractionLog.css */
+
+.InteractionLog {
+
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.interactionlog-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.interactionlog-container-head {
+    text-align: center;
+  }
+  
+  .interactionlog-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  .interactionlog-col {
+    flex: 1;
+    text-align: center;
+  }
+  
+.interactionlog-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.interactionlog-table th,
+.interactionlog-table td {
+  border: 1px solid #666;
+  padding: 10px;
+  text-align: center;
+}
+
+.interactionlog-table th {
+  background-color: #555;
+}
+
+.interactionlog-table tr:nth-child(even) {
+  background-color: #555;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input {
+  width: calc(50% - 5px);
+  padding: 10px;
+  font-size: 14px;
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

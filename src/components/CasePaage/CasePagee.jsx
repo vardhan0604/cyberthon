@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import "./casePaage.css";
 import Navtop from "../Navbar/Navtop";
 import ImageComponent from "./imgbox";
-import caseimage from "../../img/criminal-process.png"
+import caseimage from "../../img/criminal-process.png";
+import {useNavigate} from "react-router-dom"
 const CasePagee = () => {
-    const [isFullscreen, setIsFullscreen] = useState(false);
+  const navigate = useNavigate(); 
+  const [isFullscreen, setIsFullscreen] = useState(false);
   // const [isFullScreen,setIsFullScreen]=useState(false);
   const imageUrl = "https://example.com/sample-image.jpg";
   const toggleFullscreen = () => {
     setIsFullscreen(!isFullscreen);
   };
-  
-
+ 
   return (
     <div className="casePage">
       <Navtop />
@@ -41,41 +42,73 @@ const CasePagee = () => {
               </div>
               <div className="flex-1-items">
                 <h2 className="flex-head">Case Summary:</h2>
-                <div>The defence attorney claimed that Nobin Chandra had committed the act in a fit of rage and to ensure that his wife had to belong to him. It was claimed that when Elokeshi confessed about her actions to the defendant, Nobin wanted to protect her and shift her from her parent’s house, over which the Priest had control. But the latter became aware of these plans and his goons prevented the shift from happening, leading to Nobin Chandra killing his wife. Nobin then immediately went to the Police to confess his crimes.
-The entire series of events painted Nobin as the victim. The jury eventually acquitted the defendant on the grounds of insanity. But the Sessions judge overturned the judgement on the ground of “disagreement on the native sense of justice” and sent the case to the Calcutta High Court wherein the defendant was held guilty.</div>
+                <div>
+                  The defence attorney claimed that Nobin Chandra had committed
+                  the act in a fit of rage and to ensure that his wife had to
+                  belong to him. It was claimed that when Elokeshi confessed
+                  about her actions to the defendant, Nobin wanted to protect
+                  her and shift her from her parent’s house, over which the
+                  Priest had control. But the latter became aware of these plans
+                  and his goons prevented the shift from happening, leading to
+                  Nobin Chandra killing his wife. Nobin then immediately went to
+                  the Police to confess his crimes. The entire series of events
+                  painted Nobin as the victim. The jury eventually acquitted the
+                  defendant on the grounds of insanity. But the Sessions judge
+                  overturned the judgement on the ground of “disagreement on the
+                  native sense of justice” and sent the case to the Calcutta
+                  High Court wherein the defendant was held guilty.
+                </div>
               </div>
             </div>
             <div className="flex-2">
-            <div className="flex-2-items">
-  <h2 className="flex-head">Victim Details:</h2>
-  <div>
-    <span className="d">Name: <span className="bold">John Doe</span></span>
-    <span className="d">Age: <span className="bold">30</span></span>
-    <span className="d">Address: 123 Main Street</span>
-    <span className="d">Phone: 555-555-5555</span>
-  </div>
-</div>
+            
+              <div className="flex-2-items victim">
+             
+              
+               
+              
+                <h2 className="flex-head" onClick={()=>navigate("/InteractionLog")}>Victim Details:</h2>
+                <div>
+                  <span className="d">
+                    Name: <span className="bold">John Doe</span>
+                  </span>
+                  <span className="d">
+                    Age: <span className="bold">30</span>
+                  </span>
+                  <span className="d">Address: 123 Main Street</span>
+                  <span className="d">Phone: 555-555-5555</span>
+                </div>
+               
+                </div>
+     
 
-<div className="flex-2-items">
-  <h2 className="flex-head">Culprit Details:</h2>
-  <div>
-    <span className="d">Name: <span className="bold">Jane Doe</span></span>
-    <span className="d">Age: <span className="bold">35</span></span>
-    <span className="d">Address: 456 Elm Street</span>
-    <span className="d">Phone: 555-555-5556</span>
-  </div>
-</div>
+              <div className="flex-2-items">
+                <h2 className="flex-head">Culprit Details:</h2>
+                <div>
+                  <span className="d">
+                    Name: <span className="bold">Jane Doe</span>
+                  </span>
+                  <span className="d">
+                    Age: <span className="bold">35</span>
+                  </span>
+                  <span className="d">Address: 456 Elm Street</span>
+                  <span className="d">Phone: 555-555-5556</span>
+                </div>
+              </div>
 
-<div className="flex-2-items">
-  <h2 className="flex-head">Eye Witness Details:</h2>
-  <div>
-    <span className="d">Name: <span className="bold">James Smith</span></span>
-    <span className="d">Age: <span className="bold">25</span></span>
-    <span className="d">Address: 789 Oak Street</span>
-    <span className="d">Phone: 555-555-5557</span>
-  </div>
-</div>
-
+              <div className="flex-2-items">
+                <h2 className="flex-head">Eye Witness Details:</h2>
+                <div>
+                  <span className="d">
+                    Name: <span className="bold">James Smith</span>
+                  </span>
+                  <span className="d">
+                    Age: <span className="bold">25</span>
+                  </span>
+                  <span className="d">Address: 789 Oak Street</span>
+                  <span className="d">Phone: 555-555-5557</span>
+                </div>
+              </div>
             </div>
             <div className="flex-3">
               <div>DS</div>
@@ -135,7 +168,7 @@ The entire series of events painted Nobin as the victim. The jury eventually acq
             </div>
           </div>
           <div className="caseflow">
-            <img className="caseflow-img"src={caseimage} alt="" />
+            <img className="caseflow-img" src={caseimage} alt="" />
           </div>
           <div className="officer-assigned">
             <div className="officer-assigned-head">
@@ -164,7 +197,7 @@ The entire series of events painted Nobin as the victim. The jury eventually acq
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CasePagee
+export default CasePagee;

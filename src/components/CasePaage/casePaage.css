@@ -281,3 +281,7 @@ left: 0;
 .caseflow-img{
   height: 100%;
 }
+
+.victim{
+  cursor: pointer;
+}
